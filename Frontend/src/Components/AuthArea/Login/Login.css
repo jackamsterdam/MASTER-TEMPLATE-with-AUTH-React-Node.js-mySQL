@@ -1,0 +1,33 @@
+.Login > form {
+	width: 450px;
+    padding: 20px;
+	margin: 20px;
+
+}
+
+.Login input {
+	width: 100%;
+	margin: 0 0 20px 0;
+	box-sizing: border-box;
+}
+
+.Login span {
+	color: red;
+	position: absolute;
+	margin: 0 60px;
+}
+
+.Login button {
+	width: 100%;
+	margin: 10px 0;
+}
+
+
+.Login button:hover {
+	transform: scale(0.98);
+	cursor: pointer;
+}
+
+.Login p {
+	text-decoration: underline;
+}

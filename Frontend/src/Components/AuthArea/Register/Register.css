@@ -1,0 +1,27 @@
+.Register > form {
+  width: 450px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.Register input {
+  width: 100%;
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+}
+
+.Register span {
+  color: red;
+  position: absolute;
+  margin: 0 60px;
+}
+
+.Register button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.Register button:hover {
+  transform: scale(0.98);
+  cursor: pointer;
+}

@@ -1,0 +1,104 @@
+###REST CLIENT Extension
+GET http://localhost:3001/api/...
+Authorization:
+
+###
+GET http://localhost:3001/api/...  /1
+Authorization:
+###
+POST http://localhost:3001/api/...
+Content-Type: application/json
+Authorization:
+
+{
+    "name": "harry",
+    "price": 65,
+    "stock": 35
+}
+
+###
+PUT htt://localhost:3001/api/...      /1
+Content-Type: application/json
+Authorization:
+
+{
+    "name": "harryupdate",
+    "price": 88,
+    "stock": 9876
+}
+### 
+PATCH http://localhost:3001/api/...      /1
+Content-Type: application/json
+Authorization:
+
+{      
+     "price": 88
+}
+
+###
+DELETE http://localhost:3001/api/products/99
+
+
+
+
+
+###Error checks:
+
+### 404 ErrorModel   Resource with id ____________ not found.
+GET http://localhost:3001/api/products/123412322432432423
+###  400 ErrorModel Bad Request  Joi validation error
+POST http://localhost:3001/api/products
+Content-Type: application/json
+# Authorization: puttoken here 
+
+{
+    "name": "harry",
+    "price": -20,
+    "stock": "not a number"
+}
+### 404 ErrorModel   Resource with id ____________ not found.  
+PUT http://localhost:3001/api/products/98789798778
+Content-Type: application/json
+#Authorization:
+
+{
+    "name": "harryupdate",
+    "price": 88,
+    "stock": 9876
+}
+
+###  400 ErrorModel Bad Request  Joi validation error
+PUT http://localhost:3001/api/products/98
+Content-Type: application/json
+#Authorization:
+
+{
+    "name": "harryupdate",
+    "price": -4,
+    "stock": "some string where number supposed to be"
+}
+### 404 ErrorModel   Resource with id ____________ not found. 
+PATCH http://localhost:3001/api/products/98453454353
+Content-Type: application/json
+#Authorization:
+
+{
+    "name": "partialname",
+    
+    "stock": 12
+}
+
+
+###  400 ErrorModel Bad Request  Joi validation error
+PATCH http://localhost:3001/api/products/98
+Content-Type: application/json
+#Authorization:
+
+{
+   
+    
+    "stock":  "some string wher number suppose to be"
+}
+### 404 ErrorModel   Resource with id ____________ not found. 
+DELETE http://localhost:3001/api/products/9943465465465
+
