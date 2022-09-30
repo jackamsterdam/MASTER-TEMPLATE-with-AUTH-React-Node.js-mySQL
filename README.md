@@ -1,4 +1,4 @@
-# This is only a template to start a new project using React, Node and MySQL
+# This is only a template to start a new project using React, Node and MySQL with **Authorization and Authentication in front and back**
 
 # If you want to run this code on your local machine follow these instructions:
 ## If you had issues running the program or you enjoyed my project please contact me on Linkedin: https://www.linkedin.com/in/jack-amsterdam/
