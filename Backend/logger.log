@@ -1,0 +1,2 @@
+info	2022-09-30 09:24:49	POST Request to /api/auth/login
+error	2022-09-30 09:24:49	ER_NO_DB_ERROR: No database selected
