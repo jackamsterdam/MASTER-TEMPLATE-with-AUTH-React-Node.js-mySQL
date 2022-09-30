@@ -4,7 +4,7 @@ import UserModel from '../03-models/user-model'
 import authLogic from '../05-logic/auth-logic'
 
 const router = express.Router()
-
+  //!add verifyLoggedIn חסימה
 // http://localhost:3001/api/auth/register
 router.post('/auth/register', async (request: Request, response: Response, next: NextFunction) => {
   try {

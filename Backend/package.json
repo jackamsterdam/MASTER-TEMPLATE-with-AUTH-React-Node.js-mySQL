@@ -1,5 +1,5 @@
 {
-  "name": "third-project-assignment",
+  "name": "reusable-template-node-with-ts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,15 @@
     "dev": "nodemon --exec ts-node src/app.ts",
     "build": "tsc"
   },
-  "keywords": [],
+  "keywords": [ 
+    "rest api",
+    "jack",
+    "amsterdam",
+    "backend",
+    "back end",
+    "back-end",
+    "rest"
+  ],
   "author": "Jack Amsterdam",
   "license": "ISC",
   "devDependencies": {
