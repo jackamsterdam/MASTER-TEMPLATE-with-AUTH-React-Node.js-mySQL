@@ -1,6 +1,8 @@
 import { OkPacket } from "mysql";
 import dal from "../04-dal/dal";
 import ErrorModel from "../03-models/error-model";
+import path from "path";
+
 
 // for photos only: 
 // import {v4 as uuid} from 'uuid'
@@ -55,7 +57,8 @@ import ErrorModel from "../03-models/error-model";
 //         if (product.image) {
 //           const extension = product.image.name.substring(product.image.name.lastIndexOf('.'))
 //           product.imageName = uuid() + extension
-//           await product.image.mv('./src/assets/images/products/' + product.imageName)
+//           Dont use this line: await product.image.mv('./src/assets/images/products/' + product.imageName)
+//           await product.image.mv(path.join(__dirname, '..', 'assets', 'images', product.imageName))
 //           delete product.image
 //         }
 
@@ -83,10 +86,12 @@ import ErrorModel from "../03-models/error-model";
 //     product.imageName = dbProduct.imageName   
   
 //     if (product.image) {  
-//        safeDelete('./src/assets/images/products/' + product.imageName)
+//        Dont use this line:   safeDelete('./src/assets/images/products/' + product.imageName)
+//        safeDelete(path.join(__dirname, '..', 'assets', 'images', product.imageName))
 //        const extension = product.image.name.substring(product.image.name.lastIndexOf('.'))
 //        product.imageName = uuid() + extension 
-//        await product.image.mv('./src/assets/images/products/' + product.imageName)
+//        Dont use this line: await product.image.mv('./src/assets/images/products/' + product.imageName)
+//        await product.image.mv(path.join(__dirname, '..', 'assets', 'images', product.imageName))
 //        delete product.image
      
 //     }
@@ -116,10 +121,12 @@ import ErrorModel from "../03-models/error-model";
 //         //handle image:
 //          product.imageName = dbProduct.imageName
 //          if (product.image) {       
-//           safeDelete('./src/assets/images/products/' + product.imageName)
+//           DONT USE THIS:  safeDelete('./src/assets/images/products/' + product.imageName)
+//           safeDelete(path.join(__dirname, '..', 'assets', 'images', product.imageName))
 //           const extension = product.image.name.substring(product.image.name.lastIndexOf('.'))
 //           product.imageName = uuid() + extension 
-//           await product.image.mv('./src/assets/images/products/' + product.imageName)
+//           DONT USE THIS LINE: await product.image.mv('./src/assets/images/products/' + product.imageName)
+//           await product.image.mv(path.join(__dirname, '..', 'assets', 'images', product.imageName))
 //           delete product.image
 //          }
   
