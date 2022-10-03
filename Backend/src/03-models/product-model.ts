@@ -16,6 +16,7 @@ class ProductModel {
         this.name = product.name;
         this.price = product.price;
         this.stock = product.stock;
+        this.image = product.image
         this.imageName = product.imageName
     }
 
