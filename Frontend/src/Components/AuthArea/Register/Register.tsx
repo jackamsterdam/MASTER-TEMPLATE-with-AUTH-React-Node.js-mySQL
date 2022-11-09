@@ -57,7 +57,7 @@ function Register(): JSX.Element {
                 <span>{formState.errors?.username?.message}</span>
 
                 <label>Password:</label>
-                <input type="text" {...register('password', {
+                <input type="password" {...register('password', {
                     required: { value: true, message: "Missing password" },
                     minLength: { value: 2, message: "Password must be more than 2 characters" },
                     maxLength: { value: 100, message: "Password must not exceed 100 characters" }
